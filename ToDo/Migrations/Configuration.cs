@@ -26,6 +26,12 @@ namespace ToDo.Migrations
             //      new Person { FullName = "Rowan Miller" }
             //    );
             //
+
+            context.ToDoItems.AddOrUpdate(
+                i => i.ToDoText,
+                new Models.ToDoItem { ToDoText = "Get milk" },
+                new Models.ToDoItem { ToDoText = "Get bacon" }
+            );
         }
     }
 }
